@@ -1,0 +1,51 @@
+<div class="dashboard-container">
+  
+  <aside class="sidebar">
+    <h2>Central de Tarefas</h2>
+    <div class="novo-item-form">
+      <h3>{{ modoEdicao ? 'Editar Registro' : 'Novo Registro' }}</h3>
+      <input type="text" [(ngModel)]="tarefaSelecionada.titulo" placeholder="Título">
+      <textarea [(ngModel)]="tarefaSelecionada.descricao" placeholder="Descrição detalhada" rows="4"></textarea>
+      
+      <div class="form-actions">
+        <button (click)="salvarTarefa()" class="btn-save">
+          {{ modoEdicao ? 'Atualizar' : 'Salvar' }}
+        </button>
+        <button *ngIf="modoEdicao" (click)="resetarFormulario()" class="btn-cancel">Cancelar</button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="divider"></div>
+
+  <main class="content">
+    <div class="grid-tarefas">
+      <div class="card" *ngFor="let t of tarefas" 
+           [class.concluido]="t.status === 'Concluído'"
+           [class.card-expandido]="t.expandida">
+        
+        <div class="card-header">
+          <h3>{{ t.titulo }}</h3>
+          <div class="acoes">
+            <button (click)="prepararEdicao(t)" title="Editar">✏️</button>
+            <button (click)="deletarTarefa(t.id!)" title="Excluir">🗑️</button>
+            <button class="btn-toggle" (click)="toggleExpandir(t)">
+              {{ t.expandida ? '🔼' : '🔽' }}
+            </button>
+          </div>
+        </div>
+        
+        <div class="card-body">
+          <p>{{ t.descricao }}</p>
+        </div>
+        
+        <div class="card-footer">
+          <span (click)="alternarStatus(t)" class="status-badge">
+            {{ t.status === 'Concluído' ? '✅ Concluído' : '⏳ Pendente' }}
+          </span>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="tarefas.length === 0" class="loading">Nenhuma tarefa encontrada...</div>
+  </main>
+</div>
