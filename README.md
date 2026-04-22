@@ -1,59 +1,59 @@
-# GerenciadorTarefasApp
+# 📋 Central de Tarefas - Desafio Avanade
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.7.
+Bem-vindo ao projeto **Central de Tarefas**, um sistema de gerenciamento de atividades desenvolvido como parte do processo seletivo para a Avanade. O projeto consiste em um Dashboard moderno e responsivo com integração completa entre um Front-end em Angular e um Back-end em .NET.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Tecnologias Utilizadas
 
-```bash
-ng serve
-```
+### Front-end:
+* **Angular 19** (Standalone Components)
+* **TypeScript**
+* **SCSS** (Layout em Grid e Flexbox)
+* **Google Fonts** (Montserrat & Comfortaa)
+* **RxJS** para consumo de API assíncrona
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Back-end:
+* **.NET 9 / ASP.NET Core**
+* **C#**
+* **Entity Framework Core**
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🎨 Diferenciais do Projeto
 
-```bash
-ng generate component component-name
-```
+* **Interface Dark/Graphite:** Design moderno e elegante com paleta de cores personalizada.
+* **Layout Responsivo:** Otimizado para resoluções Full HD (1980x720) e adaptável para dispositivos móveis.
+* **Smart Cards:**
+    * Organização em grid com 4 colunas.
+    * Altura e largura fixas para manter a harmonia visual.
+    * Funcionalidade de **expansão de texto** via botão para descrições longas, sem quebrar o layout.
+* **Tipografia Personalizada:** Uso das fontes Montserrat e Comfortaa para uma estética clean e profissional.
+* **Feedback Visual:** Badges dinâmicas para status de tarefas (Pendente/Concluído).
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 🛠️ Como Executar o Projeto
 
-## Building
+### Pré-requisitos:
+* Node.js (v18+)
+* Angular CLI
+* .NET SDK 9
 
-To build the project run:
+### Passos para Instalação:
 
-```bash
-ng build
-```
+* **1. Clonar o repositório:**
+  Execute `git clone https://github.com/XimenesJu/Desafio-Avanade---Sistema-de-Gerenciamento-de-Tarefas.git`
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+* **2. Configurar o Backend:**
+  Navegue até a pasta do servidor/API e execute o comando `dotnet run`.
 
-## Running unit tests
+* **3. Configurar o Frontend:**
+  Navegue até a pasta do projeto Angular e execute `npm install` para instalar as dependências.
+  Inicie a aplicação com o comando `ng serve`.
+  Acesse `http://localhost:4200` no seu navegador.
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+---
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 👩‍💻 Desenvolvedora
+**Sarah Juliana Carvalho Ximenes** - Desenvolvedora Full-Stack e entusiasta de Engenharia de Dados.
